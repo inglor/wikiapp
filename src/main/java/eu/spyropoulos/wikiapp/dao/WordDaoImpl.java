@@ -1,6 +1,7 @@
 package eu.spyropoulos.wikiapp.dao;
 
 import eu.spyropoulos.wikiapp.model.Word;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -30,7 +31,9 @@ public class WordDaoImpl implements WordDao {
   @Override
   @SuppressWarnings("unchecked")
   public List<Word> listWords() {
-    return sessionFactory.getCurrentSession().createQuery("from Word").list();
+    String queryString = "select w from Word w";
+    Query query = sessionFactory.getCurrentSession().createQuery(queryString);
+    return query.list();
   }
 
   @Override
@@ -46,5 +49,11 @@ public class WordDaoImpl implements WordDao {
       return true;
     }
     return false;
+  }
+
+  @Override
+  public Word getWordByName(String wordName) {
+    String queryString = "from Word w where w.name = '" + wordName + "'";
+    return (Word) sessionFactory.getCurrentSession().createQuery(queryString).list().get(0);
   }
 }

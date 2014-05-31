@@ -16,4 +16,6 @@ public interface WordService {
 
   public boolean removeWord(Long id);
 
+  public Word getWordByName(String wordName);
+
 }

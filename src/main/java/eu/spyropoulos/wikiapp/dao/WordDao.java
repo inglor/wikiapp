@@ -14,4 +14,6 @@ public interface WordDao {
   public Word getWordById(Long wordId);
 
   public boolean removeWord(Long id);
+
+  public Word getWordByName(String wordName);
 }

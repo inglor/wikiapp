@@ -1,0 +1,4 @@
+<h2>Detail of Word</h2>
+<p>Id: ${word.id}</p>
+<p>Name: ${word.name}</p>
+<p>Definition: ${word.definition}</p>

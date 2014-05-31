@@ -1,0 +1,6 @@
+<h2>List of Words</h2>
+<ul>
+    #foreach($word in $words)
+        <li><a href="/view/word/${word.id}">${word.name}</a></li>
+    #end
+</ul>

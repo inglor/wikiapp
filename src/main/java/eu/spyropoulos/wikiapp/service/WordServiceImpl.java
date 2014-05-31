@@ -38,4 +38,9 @@ public class WordServiceImpl implements WordService {
   public boolean removeWord(Long id) {
     return wordDao.removeWord(id);
   }
+
+  @Transactional
+  public Word getWordByName(String wordName) {
+    return wordDao.getWordByName(wordName);
+  }
 }

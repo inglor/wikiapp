@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Words</title>
+</head>
+<body>
+<h1>Simple Words App</h1>
+    $screen_content
+<hr/>
+Copyright &copy 2014 Leonidas Spyropoulos
+</body>
+</html>

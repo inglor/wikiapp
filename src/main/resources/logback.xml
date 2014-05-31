@@ -16,6 +16,8 @@
   </appender>
 
   <logger name="org.springframework" level="INFO"/>
+  <logger name="org.apache" level="INFO"/>
+  <logger name="org.hibernate" level="INFO"/>
   <logger name="eu.spyropoulos.wikiapp" level="DEBUG"/>
 
   <root level="DEBUG">

@@ -7,9 +7,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
+@EnableWebMvc
 @Configuration
 @ComponentScan("eu.spyropoulos.wikiapp")
-@EnableWebMvc
 public class AppConfig {
 
   @Bean

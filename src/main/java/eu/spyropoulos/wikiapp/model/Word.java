@@ -1,11 +1,21 @@
 package eu.spyropoulos.wikiapp.model;
 
+import javax.persistence.*;
 import java.io.Serializable;
-import java.util.UUID;
 
+@Entity
+@Table(name = "word")
 public class Word implements Serializable {
-  private UUID id = UUID.randomUUID();
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "id")
+  private Long id;
+
+  @Column(name = "name")
   private String name;
+
+  @Column(name = "definition")
   private String definition;
 
   public Word() {
@@ -20,7 +30,7 @@ public class Word implements Serializable {
     this.definition = definition;
   }
 
-  public UUID getId() {
+  public Long getId() {
     return id;
   }
 

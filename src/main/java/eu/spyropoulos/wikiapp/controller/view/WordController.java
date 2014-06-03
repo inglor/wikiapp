@@ -21,14 +21,6 @@ public class WordController {
   @Autowired
   private WordService wordService;
 
-//  @RequestMapping(value = "/word/{wordName}", method = RequestMethod.GET)
-//  public String getWordByName(@PathVariable String wordName, Model model) {
-//    Word foundWord = wordService.getWordByName(wordName);
-//    log.debug("Found word in database : " + foundWord);
-//    model.addAttribute("word", foundWord);
-//    return "details";
-//  }
-
   @RequestMapping(value = "/words", method = RequestMethod.GET)
   public String getWords(Model model) {
     List<Word> words = wordService.listWords();

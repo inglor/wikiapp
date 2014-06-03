@@ -9,7 +9,7 @@
   </appender>
 
   <appender name="LOGFILE" class="ch.qos.logback.core.FileAppender">
-    <file>wikiapp.log</file>
+    <file>../wikiapp.log</file>
     <encoder>
       <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
@@ -18,6 +18,7 @@
   <logger name="org.springframework" level="INFO"/>
   <logger name="org.apache" level="INFO"/>
   <logger name="org.hibernate" level="INFO"/>
+  <logger name="org.elasticsearch" level="INFO"/>
   <logger name="eu.spyropoulos.wikiapp" level="DEBUG"/>
 
   <root level="DEBUG">

@@ -40,7 +40,17 @@ public class WordServiceImpl implements WordService {
   }
 
   @Transactional
-  public Word getWordByName(String wordName) {
-    return wordDao.getWordByName(wordName);
+  public List<Word> search(String wordName) {
+    return wordDao.search(wordName);
+  }
+
+  @Transactional
+  public void reIndex() {
+    wordDao.reIndexElasticSearch();
+  }
+
+  @Transactional
+  public void optimize() {
+    wordDao.optimizeElasticSearch();
   }
 }
